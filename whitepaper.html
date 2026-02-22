@@ -1,95 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADL Coin | Whitepaper</title>
+    <title>ADL Coin | Institutional Whitepaper</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #1a1a1a; line-height: 1.8; }
-        .sidebar { background-color: #f8fafc; border-right: 1px solid #e2e8f0; }
-        h1, h2, h3 { color: #0f172a; font-weight: 700; }
-        .gradient-line { height: 4px; background: linear-gradient(90deg, #3b82f6, #8b5cf6); width: 60px; margin-bottom: 1.5rem; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #1e293b; line-height: 1.8; }
+        .section-title { color: #0f172a; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 2rem; }
+        .highlight-box { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 2rem; border-radius: 1rem; margin: 2rem 0; }
+        code { background-color: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; color: #ef4444; }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
 
-    <div class="flex flex-col md:flex-row min-h-screen">
-        <nav class="md:w-64 sidebar p-8 sticky top-0 h-screen hidden md:block">
-            <div class="mb-10 text-xl font-bold text-blue-600">ADL WHITEPAPER</div>
-            <ul class="space-y-4 text-sm font-medium text-gray-500">
-                <li><a href="#summary" class="hover:text-blue-600">1. Executive Summary</a></li>
-                <li><a href="#problem" class="hover:text-blue-600">2. The Problem</a></li>
-                <li><a href="#solution" class="hover:text-blue-600">3. The Solution</a></li>
-                <li><a href="#tokenomics" class="hover:text-blue-600">4. Tokenomics</a></li>
-                <li><a href="index.html" class="text-blue-500 mt-10 block">← Back to Home</a></li>
-            </ul>
-        </nav>
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl my-12 overflow-hidden rounded-xl">
+        <header class="bg-[#0f172a] text-white p-16 text-center">
+            <img src="logo.png" alt="ADL Logo" class="h-20 mx-auto mb-8">
+            <h1 class="text-4xl font-extrabold mb-4 uppercase tracking-tighter">ADL Coin Technical Whitepaper</h1>
+            <p class="text-blue-400 font-semibold tracking-widest uppercase text-sm">Institutional Liquidity & Cross-Border Settlement Protocol</p>
+            <div class="mt-8 text-gray-400 text-xs uppercase">Version 2.1.0 | Released: Feb 2026</div>
+        </header>
 
-        <main class="flex-1 p-8 md:p-20 bg-white shadow-xl">
-            <article class="max-w-3xl mx-auto">
-                <header class="mb-16">
-                    <h1 class="text-4xl md:text-5xl mb-4">ADL Coin Whitepaper</h1>
-                    <p class="text-gray-500">Version 1.0 | February 2026</p>
-                </header>
+        <div class="p-8 md:p-20">
+            <section id="abstract" class="mb-20">
+                <h2 class="section-title">1. Abstract</h2>
+                <p class="text-lg text-gray-600 leading-relaxed italic">
+                    ADL Coin (ADL) introduces a decentralized liquidity architecture designed to optimize global capital flows for enterprises and private funds. By tokenizing settlement obligations on the Ethereum Mainnet, ADL provides an immutable bridge between isolated fiat jurisdictions, significantly reducing the "Trapped Capital" risk and settlement latency inherent in the traditional SWIFT network.
+                </p>
+            </section>
 
-                <section id="summary" class="mb-16">
-                    <div class="gradient-line"></div>
-                    <h2 class="text-2xl mb-6 uppercase tracking-wide">1. Executive Summary</h2>
-                    <p class="mb-4 text-gray-700">ADL Coin (ADL) is a specialized liquidity protocol built on the Ethereum blockchain, specifically tailored for cross-border institutional capital management.</p>
-                </section>
-
-                <section id="problem" class="mb-16">
-                    <div class="gradient-line"></div>
-                    <h2 class="text-2xl mb-6 uppercase tracking-wide">2. The Problem: Trapped Capital</h2>
-                    <p class="mb-4 text-gray-700 font-semibold italic">"Enterprises often lose up to 90% of their operational liquidity due to rigid local capital controls."</p>
-                    <p class="text-gray-700">In many emerging markets, strict foreign exchange laws prevent businesses from efficiently repatriating profits. This leads to massive idle capital that cannot be reinvested, effectively trapping wealth within a single jurisdiction.</p>
-                </section>
-
-                <section id="solution" class="mb-16">
-                    <div class="gradient-line"></div>
-                    <h2 class="text-2xl mb-6 uppercase tracking-wide">3. The ADL Solution</h2>
-                    <p class="text-gray-700 mb-6">ADL creates a "Liquidity Bridge" by connecting local currency pools with global digital assets. Our protocol allows businesses to:</p>
-                    <ul class="list-disc pl-6 space-y-4 text-gray-700">
-                        <li><strong>Convert</strong> local currency into ADL-backed liquidity certificates.</li>
-                        <li><strong>Transfer</strong> value instantly via Ethereum's secure infrastructure.</li>
-                        <li><strong>Settle</strong> in any target jurisdiction through our network of global partners, bypassing traditional banking bottlenecks.</li>
+            <section id="problem" class="mb-20">
+                <h2 class="section-title">2. The Liquidity Gap Analysis</h2>
+                <p class="mb-6">Global trade is currently hindered by fragmented capital controls. In regions such as Southeast Asia, businesses face high friction costs when repatriating earnings.</p>
+                <div class="highlight-box">
+                    <ul class="space-y-4">
+                        <li><strong>Settlement Friction:</strong> Traditional banks impose 3-5 day delays for cross-border transfers.</li>
+                        <li><strong>Regulatory Bottlenecks:</strong> Local FX laws often restrict more than 80-90% of a company's available liquidity from leaving the host country.</li>
+                        <li><strong>Counterparty Risk:</strong> Lack of transparency in multi-step intermediary banking leads to potential capital loss and excessive fees.</li>
                     </ul>
-                </section>
+                </div>
+            </section>
 
-                <section id="tokenomics" class="mb-16">
-                    <div class="gradient-line"></div>
-                    <h2 class="text-2xl mb-6 uppercase tracking-wide">4. Tokenomics</h2>
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="border-b-2 border-gray-100 uppercase text-xs font-bold text-gray-400">
-                                <th class="py-4">Metric</th>
-                                <th class="py-4">Details</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700">
-                            <tr class="border-b border-gray-50">
-                                <td class="py-4 font-bold uppercase">Total Supply</td>
-                                <td class="py-4">2,000,000 ADL</td>
-                            </tr>
-                            <tr class="border-b border-gray-50">
-                                <td class="py-4 font-bold uppercase">Network</td>
-                                <td class="py-4">Ethereum (ERC-20)</td>
-                            </tr>
-                            <tr class="border-b border-gray-50">
-                                <td class="py-4 font-bold uppercase">Burn Rate</td>
-                                <td class="py-4">Dynamic based on transaction volume</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+            <section id="solution" class="mb-20">
+                <h2 class="section-title">3. Technical Architecture</h2>
+                <h3 class="text-xl font-bold mb-4">3.1 Smart Contract Sovereignty</h3>
+                <p class="mb-6">The ADL Protocol is governed by an ERC-20 compliant smart contract verified on Etherscan. The contract address <code>0x6d74...49487</code> ensures public auditability and decentralization.</p>
                 
-                <footer class="mt-32 pt-10 border-t text-gray-400 text-sm italic">
-                    ADL Coin Project © 2026. All rights reserved. Professional investment carries risks.
-                </footer>
-            </article>
-        </main>
+                <h3 class="text-xl font-bold mb-4">3.2 The Settlement Bridge</h3>
+                <p>When an enterprise deposits local fiat at a regional ADL Vault, a corresponding liquidity event is triggered on-chain. ADL tokens act as the collateralized asset, ensuring that value is locked and transferable without requiring the physical movement of fiat currency through correspondent banks.</p>
+            </section>
+
+            <section id="tokenomics" class="mb-20">
+                <h2 class="section-title">4. Tokenomics & Deficit Control</h2>
+                <p class="mb-8 text-gray-600 font-medium">To maintain long-term institutional value, ADL implements a deflationary supply model:</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="border p-6 rounded-lg">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase">Supply Cap</h4>
+                        <p class="text-sm">Hard-cap of <strong>2,000,000 ADL</strong>. No further issuance is possible through the <code>Mint</code> function, preventing dilution of value.</p>
+                    </div>
+                    <div class="border p-6 rounded-lg">
+                        <h4 class="font-bold text-purple-600 mb-2 uppercase">Burning Protocol</h4>
+                        <p class="text-sm">20% of net spread profits generated from global settlement services are utilized to buy back and <code>Burn</code> ADL tokens from the open market.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="security" class="mb-20">
+                <h2 class="section-title">5. Security & Compliance</h2>
+                <p class="mb-6">ADL prioritizes asset safety through multi-layered security protocols:</p>
+                <ul class="list-disc pl-8 space-y-4">
+                    <li><strong>Pausable Contract:</strong> The protocol can be halted by the administration in case of unforeseen external market manipulation or systemic risks.</li>
+                    <li><strong>Transparency:</strong> All liquidity pools and transactions are visible 24/7 on the public blockchain.</li>
+                </ul>
+            </section>
+
+            <footer class="mt-24 pt-10 border-t border-gray-100 text-center">
+                <div class="text-sm text-gray-400 uppercase tracking-widest mb-4 italic">Official Institutional Document</div>
+                <div class="flex justify-center space-x-6 text-blue-500 font-bold mb-8">
+                    <a href="index.html">HOME</a>
+                    <a href="https://adlfx.org">WEBSITE</a>
+                    <a href="https://etherscan.io/address/0x6d74f91bd4d13ffa0e9678b717feb67256849487">ETHERSCAN</a>
+                </div>
+                <p class="text-xs text-gray-300">© 2026 ADL Coin Foundation. All information contained herein is for informational purposes only and does not constitute financial advice.</p>
+            </footer>
+        </div>
     </div>
 
 </body>
